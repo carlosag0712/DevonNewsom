@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Hello Friends!</h1>
+        <ul>
+            {% for friend in friends %}
+            <li>{{ friend }}</li>
+            {% endfor %}
+        </ul>
+        <h2>Add a friend</h2>
+        <form action="/create" method="POST">{% csrf_token %}
+            <input type="text" name="first" placeholder="First Name">
+            <input type="text" name="last" placeholder="Last Name">
+            <input type="submit" value="Add Friend">
+        </form>
+    </body>
+</html>

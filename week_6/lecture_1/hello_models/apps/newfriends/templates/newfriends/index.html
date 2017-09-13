@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+   <h1>These are my friends</h1>
+   <ol>
+       {% for friend in friends %}
+       <li><a href="/friend/{{ friend.id }}">{{ friend }}</a> (was created at {{ friend.created_at }})</li>
+       {% endfor %}
+   </ol>
+   <hr>
+   <h2>Add a friend</h2>
+   <form action="/create" method="post">{%csrf_token%}
+       <input id="" type="text" name="first_name">
+       <input id="" type="text" name="last_name">
+       <input type="submit" value="Add">
+   </form>
+</body>
+</html>

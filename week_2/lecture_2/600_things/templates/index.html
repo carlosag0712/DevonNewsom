@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <h1>What is your favorite food?</h1>
+        <h2>Your current fav is {{ session.food }}</h2>
+        <h3>Previous foods</h3>
+        <ul>
+            {% for food in session.foods %}
+            <li>{{ food }}</li>
+            {% endfor %}
+        </ul>
+            {% for message in messages %}
+                <p class="error">{{ message }}</p>
+            {% endfor %}
+            
+        <form action="/process" method="POST">
+            <input type="text" name="food" placeholder="enter your fav">
+            <input type="submit" value="Enter">
+        </form>
+        <a href="/reset">Clear IT!!!</a>
+    </body>
+</html>

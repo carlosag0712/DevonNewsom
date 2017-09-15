@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Add an Artist to the DB</h1>
+        <hr>
+        <form action='/create' method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Artist Name</label>
+                <input type="text" name="name">
+            </div>
+            <div class="form-group">
+                <label for="formed">Date Formed</label>
+                <input type="date" name="formed">
+            </div>
+            <div class="form-group">
+                <label for="ohw">ONE HIT WONDER????!!!??</label>
+                <input type="checkbox" name="ohw">
+            </div>
+            <input type="submit" value="Add Artist">
+        </form>
+    </body>
+</html>

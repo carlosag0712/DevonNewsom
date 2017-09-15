@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>{{ artist.name }}</h1>
+        <h2>Was formed {{ artist.date_formed }} </h2>
+        {% if artist.one_hit_wonder %}
+        <p>LOL ONLY ONE HITS LOLOLOL</p>
+        {% endif %}
+        <a href="/{{artist.id}}/delete"><button type="">DELETE</button></a>
+    </body>
+</html>

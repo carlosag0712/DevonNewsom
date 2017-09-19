@@ -1,0 +1,5 @@
+button, input[type='submit']{
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}

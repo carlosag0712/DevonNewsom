@@ -1,0 +1,1 @@
+Solutions for Ninja Gold in this directory

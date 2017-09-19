@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <p>Name: {{result['name']}}</p>
+    <p>Location: {{result['location']}}</p>
+    <p>Language: {{result['language']}}</p>
+    <p>Comment: {{result['comment']}}</p>
+    <a href="/"><button>Go Back</button></a>
+  </body>
+</html>

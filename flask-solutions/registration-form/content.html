@@ -1,0 +1,29 @@
+<h2>Assignment: Registration Form</h2>
+<p>
+             Create a simple registration page with the following fields:</p>
+<ul>
+ 
+<li>email</li> 
+<li>first_name</li> 
+<li>last_name</li> 
+<li>password</li> 
+<li>confirm_password</li></ul>
+<p>
+ Here are the validations you must include:</p>
+<ul>
+ 
+<li>All fields are required and must not be blank</li> 
+<li>First and Last Name cannot contain any numbers</li> 
+<li>Password should be more than 8 characters</li> 
+<li>Email should be a valid email</li> 
+<li>Password and Password Confirmation should match</li></ul>
+<p>
+             When the form is submitted, make sure the user submits appropriate information. If the user did not submit appropriate information, return the error(s) above the form that asks the user to correct the information.&nbsp;</p>
+<h3>Message Flashing with Categories</h3>
+<p>For this, you will need to use flash messages at the very least. You may have to take this one step further and add categories to the flash messages. You can learn that from the flask doc:&nbsp;<a href="http://flask.pocoo.org/docs/0.10/patterns/flashing/#flashing-with-categories" target="_blank">flash messages with categories</a></p>
+<p>
+             If the form with all the information is submitted properly, simply have it say a message "Thanks for submitting your information."</p>
+<h3>Ninja Version:</h3>
+<p>Add the validation that requires a password to have at least 1 uppercase letter and 1 numeric value.</p>
+<h3>Hacker Version:</h3>
+<p>Add a birth-date field that must be validated as a valid date and must be from the past.</p>

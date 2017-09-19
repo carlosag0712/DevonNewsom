@@ -1,0 +1,11 @@
+<h2>Assignment: Great Number Game</h2><p>Create a site that when a user loads it creates a random number between 1-100 and stores the number in <strong>session</strong>. Allow the user to guess at the number and&nbsp;tell them when they are too high or too low. If they guess the correct number tell them and offer to play again.</p><p>In order to generate a random number you can use the "random" python module:</p>
+<pre data-language="python" class=" code-toolbar  language-python"><code class="  language-python"><span class="token keyword">import</span> random <span class="token comment" spellcheck="true"># import the random module</span>
+<span class="token comment" spellcheck="true"># The random module has many useful functions. This is one that gives a random number in a range</span>
+random<span class="token punctuation">.</span>randrange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">101</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># random number between 0-100</span>
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre><p>In order to remove something from the session, you must "pop" it off of the session dictionary.</p>
+<pre data-language="python" class=" code-toolbar  language-python"><code class="  language-python"><span class="token comment" spellcheck="true"># Set session like so:</span>
+session<span class="token punctuation">[</span><span class="token string">'someKey'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">50</span>
+<span class="token comment" spellcheck="true"># Remove something from session like so:</span>
+session<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'someKey'</span><span class="token punctuation">)</span>
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre><p>
+  <img src="http://s3.amazonaws.com/General_V88/boomyeah/company_209/chapter_2240/handouts/chapter2240_3241_great-number-game.png"></p><p>Note:&nbsp;There are many different ways to do this assignment. When you finish the basic functionality, find a peer and compare your code!</p>

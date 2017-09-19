@@ -1,0 +1,20 @@
+{
+  "tasks_order": [
+    1,
+    2
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "task": "Add validations to check that the name and comment fields are not blank (display appropriate validation errors)"
+    },
+    {
+      "id": 2,
+      "task": "Add validations to check that the comment is no more than 120 characters (display appropriate validation errors)"
+    }
+  ],
+  "difficulty_level": 2,
+  "estimated_time": "2-4 hrs",
+  "allow_upload": 0,
+  "id": 24596
+}

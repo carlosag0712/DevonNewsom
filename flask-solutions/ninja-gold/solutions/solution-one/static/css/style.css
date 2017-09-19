@@ -1,0 +1,22 @@
+div#activities{
+  width: 98%;
+  height: 300px;
+  border: 2px solid black;
+  overflow: scroll;
+}
+div.locations{
+  display: inline-block;
+  vertical-align: top;
+  width: 24%;
+  height: 200px;
+  border: 2px dashed blue;
+}
+h1{
+  text-align: center;
+}
+p{
+  color: green;
+}
+p.loss{
+  color: red;
+}

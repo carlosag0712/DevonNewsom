@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ninja Gold</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <h1>Ninja Gold</h1>
+  <h2>Your Gold: {{gold}}</h2>
+  <div class="locations">
+    <h3>Farm</h3>
+    <h5>Earns 10-20 golds</h5>
+    <form action="/process_money" method="post">
+      <input type="hidden" name="building" value="farm">
+      <input type="submit" value="Find Gold!">
+    </form>
+  </div>
+  <div class="locations">
+    <h3>Cave</h3>
+    <h5>Earns 5-10 golds</h5>
+    <form action="/process_money" method="post">
+      <input type="hidden" name="building" value="cave">
+      <input type="submit" value="Find Gold!">
+    </form>
+  </div>
+  <div class="locations">
+    <h3>House</h3>
+    <h5>Earns 2-5 golds</h5>
+    <form action="/process_money" method="post">
+      <input type="hidden" name="building" value="house">
+      <input type="submit" value="Find Gold!">
+    </form>
+  </div>
+  <div class="locations">
+    <h3>Casino</h3>
+    <h5>Earns/Loses 0-50 golds</h5>
+    <form action="/process_money" method="post">
+      <input type="hidden" name="building" value="casino">
+      <input type="submit" value="Find Gold!">
+    </form>
+  </div>
+  <div id="activities">
+    {% for a in activities | reverse %}
+      <p class="{{a['class']}}">{{a['activity']}} ( {{a['date']}} )</p>
+    {% endfor %}
+  </div>
+</body>
+</html>

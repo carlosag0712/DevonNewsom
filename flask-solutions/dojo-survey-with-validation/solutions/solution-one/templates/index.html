@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <form action="/process" method="post">
+      <p>Name: <input type="text" name="name"></p>
+      <p>Location:
+        <select name="location">
+          <option>SJ</option>
+          <option>SEA</option>
+          <option>BANK</option>
+          <option>DC</option>
+          <option>DALLAS</option>
+        </select>
+      </p>
+      <p>Language:
+        <select name="language">
+          <option>Python</option>
+          <option>Ruby</option>
+          <option>Javascript</option>
+          <option>iOS</option>
+          <option>PHP</option>
+        </select>
+      </p>
+      <p>Comment:<textarea name="comment"></textarea></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+  </body>
+</html>

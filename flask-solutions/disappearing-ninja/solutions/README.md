@@ -1,0 +1,1 @@
+Solutions for Disappearing Ninja in this directory

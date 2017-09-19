@@ -1,0 +1,1 @@
+Solutions for Great Number Game in this directory

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to the awesome Movie Site</h1>
+            <hr>
+            <a href="/new">Add an Actor</a>
+            <a href="/movies/new">Add a Movie</a>
+            <h2>Actor Table</h2>
+            <a href="/filter">Show only Oscar Winners</a>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Date of Birth</th>
+                    <th>Has Oscar</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {% for actor in actors %}
+                    <tr>
+                        <td><a href="/actor/{{actor.id}}">{{actor.first_name}}</a></td>
+                        <td>{{actor.last_name}}</td>
+                        <td>{{actor.dob}}</td>
+                        <td>{{actor.has_oscar}}</td>
+                        <td><a href="/destroy/{{actor.id}}">DELETE</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

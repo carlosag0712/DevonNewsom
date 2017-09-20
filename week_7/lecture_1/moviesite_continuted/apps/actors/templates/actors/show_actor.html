@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>{{ actor.first_name }} {{ actor.last_name }}</h1>
+        <h3>Date of birth: {{ actor.dob }}</h3>
+        <h3>Has Oscar: {{ actor.has_oscar }}</h3>
+        <h3>Filmography</h3>
+        <ul>
+            {% for movie in actor.filmography.all %}
+            <li>{{ movie.title }}</li>
+            {% endfor %}
+        </ul>
+        <h3>Add film to {{ actor.first_name }}'s Filmography</h3>
+        <form action='/actor/{{actor.id}}/addfilm' method="POST">
+            {% csrf_token %}
+            <select name='movie'>
+                {% for movie in all_movies %}
+                <option value="{{movie.id}}">{{movie.title}}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Add film">
+        </form>
+    </body>
+</html>

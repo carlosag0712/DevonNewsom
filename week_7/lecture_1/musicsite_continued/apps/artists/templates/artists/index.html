@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>Welcome to my MUSIC SITE</h1>
+        <hr>
+        <a href="/new">Create Artist/Album</a>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Artist Name</th>
+                <th>Date Formed</th>
+                <th>One Hit Wonder?</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for artist in artists %}
+                <tr>
+                    <td><a href="/{{artist.id}}">{{ artist.name }}</a></td>
+                    <td>{{ artist.date_formed }}</td>
+                    <td>{{ artist.one_hit_wonder }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

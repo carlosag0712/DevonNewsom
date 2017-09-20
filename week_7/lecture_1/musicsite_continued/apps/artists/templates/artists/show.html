@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1>{{ artist.name }}</h1>
+        <h2>Was formed {{ artist.date_formed }} </h2>
+        {% if artist.one_hit_wonder %}
+        <p>LOL ONLY ONE HITS LOLOLOL</p>
+        {% endif %}
+        <a href="/{{artist.id}}/delete"><button type="">DELETE</button></a>
+        <h2>Discography</h2>
+        <ul>
+            {% for album in artist.discography.all %}
+            <li>{{ album }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<h2> Assignment: Friendships</h2>
+<p>Using the below ERD, write the SQL query that returns a list of users along with their friends' names.</p>
+<p><img src="http://s3.amazonaws.com/General_V88/boomyeah/company_209/chapter_3569/handouts/chapter3569_6392_friends.png"></p>
+<p>Create the tables and populate them with some fake data. &nbsp;Your results should look like below:</p>
+<table>
+<tbody>
+<tr>
+ <td>first_name</td>
+ <td>last_name</td>
+ <td>friend_first_name</td>
+ <td>friend_last_name</td>
+</tr>
+<tr>
+ <td>Chris</td>
+ <td>Baker</td>
+ <td>Jessica</td>
+ <td>Davidson</td>
+</tr>
+<tr>
+ <td>Chris</td>
+ <td>Baker</td>
+ <td>James</td>
+ <td>Johnson</td>
+</tr>
+<tr>
+ <td>Chris</td>
+ <td>Baker</td>
+ <td>Diana</td>
+ <td>Smith</td>
+</tr>
+<tr>
+ <td>Diana</td>
+ <td>Smith</td>
+ <td>Chris</td>
+ <td>Baker</td>
+</tr>
+<tr>
+ <td>James</td>
+ <td>Johnson</td>
+ <td>Chris</td>
+ <td>Baker</td>
+</tr>
+<tr>
+ <td>Jessica</td>
+ <td>Davidson</td>
+ <td>Chris</td>
+ <td>Baker</td></tr></tbody></table>
+<p>Your actual query will look something similar to this:</p>
+<pre data-language="php" class=" code-toolbar  language-php"><code class="  language-php"><span class="token constant">SELECT</span> <span class="token operator">*</span> <span class="token constant">FROM</span> users 
+<span class="token constant">LEFT</span> <span class="token constant">JOIN</span> friendships <span class="token constant">ON</span> <span class="token constant">____</span><span class="token operator">=</span><span class="token constant">____</span> 
+<span class="token constant">LEFT</span> <span class="token constant">JOIN</span> users <span class="token keyword">as</span> user2 <span class="token constant">ON</span> <span class="token constant">____</span> <span class="token operator">=</span> <span class="token constant">____</span>
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>Take note that we're joining the&nbsp;<strong><em>users</em></strong>&nbsp;table again but we're specifying the second <strong><em>users</em></strong> table <strong>as</strong> user2. &nbsp;You can then reference the second <strong><em>users </em></strong>by calling user2 (e.g. user2.id, user2.first_name, etc). &nbsp;</p>
+<p>You can also rename the fields that are displayed on the result by using the <strong>as</strong> keyword, like the below example: &nbsp;&nbsp;</p>
+<pre data-language="php" class=" code-toolbar  language-php"><code class="  language-php"><span class="token constant">SELECT</span> user2<span class="token punctuation">.</span>first_name <span class="token keyword">as</span> friend_first_name<span class="token punctuation">,</span> user2<span class="token punctuation">.</span>last_name <span class="token keyword">as</span> friend_last_name<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>  <span class="token constant">FROM</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code><div class="toolbar"><div class="toolbar-item"><a>Copy</a></div></div></pre>
+<p>Knowing how to do joins can be tricky but is used quite often <em>and will most likely appear again in your belt exam.</em></p>
+<div>Note: The order which we return the results is alphabetical by friend_last_name.</div>

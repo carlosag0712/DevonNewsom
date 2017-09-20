@@ -1,0 +1,1 @@
+Solutions for Friendships in this directory

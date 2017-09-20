@@ -1,0 +1,1 @@
+Solutions for MySQL Workbench Setup in this directory

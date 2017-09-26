@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Details page for Friend #{{ friend.id }}</h1>
+        <a href="/{{friend.id}}/edit">Edit {{friend.username}}</a>
+        <a href="/{{friend.id}}/delete">Delete {{friend.username}}</a>
+        <h2><strong>Username</strong> {{friend.username}}</h2>
+        <h2><strong>Created AT</strong> {{friend.created_at}}</h2>
+        <h2><strong>Updated AT</strong> {{friend.updated_at}}</h2>
+    </body>
+</html>
